@@ -1,0 +1,45 @@
+$LoginField = {
+  colors: {
+    text: $palette.white,
+    border: $palette.white
+  }
+}
+
+.LoginField {
+  border-collapse: collapse;
+  &__label,
+  &__input {
+    border-bottom: 1px solid $LoginField.colors.border;
+    display: table-cell;
+    vertical-align: middle;
+
+    .LoginField:first-child & {
+      border-top: 1px solid $LoginField.colors.border;
+    }
+  }
+
+  &__label {
+    text-align: right;
+
+    label {
+      text-transform: uppercase;
+      padding: 10px 10px 10px 5px;
+      color: $LoginField.colors.text;
+    }
+  }
+
+  &__input {
+    width: 100%;
+
+    input {
+      outline: none;
+      margin: 0;
+      padding: 10px;
+      display: block;
+      width: 100%;
+      border: none;
+      background: none;
+      color: $LoginField.colors.text;
+    }
+  }
+}
